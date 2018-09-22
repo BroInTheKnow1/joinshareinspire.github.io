@@ -43,4 +43,4 @@ Sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Sapien faucibus
  > It was the best of times, it was the worst of times  
  ~ Some old guy
 
- ![Photo of bronley and child]( "Logo Title Text 1")
+ ![Photo of bronley and child](/images/hello-world/avatar.png "Logo Title Text 1")
