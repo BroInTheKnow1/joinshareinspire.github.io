@@ -3,10 +3,10 @@
 #
 
 # Name of your site (displayed in the header)
-name: Bronley Plumb
+name: Join Share Inspire
 
 # Short bio or description (displayed in the header)
-description: Programmer, Musician, Family man
+description: Blogger
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: /images/avatar.png
@@ -20,19 +20,19 @@ github_repository_url: "https://github.com/TwitchBronBron/bronley.com"
 # Includes an icon in the footer for each username you enter
 footer-links:
   email: 
-  facebook: bronleyplumb
-  github: twitchbronbron
-  linkedin: bronley-plumb
+  facebook: 
+  github: joinshareinspire
+  linkedin: 
   rss: blog # just type anything here for a working RSS icon
-  stackoverflow: users/1633757/twitchbronbron # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  soundcloud: twitchbronbron
+  stackoverflow: 
+  soundcloud: 
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: UA-124408053-1
+google_analytics: 
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: https://www.bronley.com
+url: https://joinshareinspire.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
@@ -79,10 +79,6 @@ exclude:
 
 #exclude the worship folder from the sitemap
 defaults:
-  - scope:
-      path:            "worship/**/*"
-    values:
-      sitemap:         false
   - scope:
       path:            "**/*-draft.md"
     values:

@@ -37,32 +37,32 @@ comments:
   moderation: false
 
   # Name of the site. Used in notification emails.
-  name: "Bronley.com"
+  name: "JoinShareInspire"
 
   reCaptcha: 
     enabled: false
-    siteKey: "6Lcjt2sUAAAAAAnbinc0xaQlZpGM4tz6pVf3_vPc"
-    secret: "rljoge8tHPKFMR4QyqQBbngaXqmS1j8fIBj7OzfGlk3HtHfSSXR35tsy2mS0VbkfJf1pFRmpcD2HcXhj9jAF4XteRy5ubev1j4AUBG1JuPLpDDfcpi1wmOHLy8/ts5ztbiWNjlCp4FDfxYa+p11z+nJW9lEfSivtCzn9s2r70Go="
+    siteKey: "KEY_HERE"
+    secret: "SECRET_HERE"
 
   email:
-    from: "noreply@bronley.com"
+    from: "EMAIL_HERE"
 
   # Notification settings. When enabled, users can choose to receive notifications
   # via email when someone adds a reply or a new comment. This requires an account
   # with Mailgun, which you can get for free at http://mailgun.com.
   notifications:
     # Enable notifications
-    enabled: true
+    enabled: false
 
     # (!) ENCRYPTED
     #
     # Mailgun API key
-    apiKey: "CCi2o11mXxl91sIaZzJuLaoE1HRz7tUStKTmD9GcS/LcDqTOK6u8NjuqqXuRQVAL8p9XkZSlA4rah9RKqfujfvDRTysjy/1Dp59Lil7ORT/WzPAhsr3S96qXmVsxtDKveKR1K0gGgvcaNincYzstYapEAjZekmHOER9Q29EUpAU="
+    apiKey: "API_KEY_HERE"
 
     # (!) ENCRYPTED
     #
     # Mailgun domain (encrypted)
-    domain: "C2mHJY7s72KyiCh0cooUkU7eQUsgbNbUthXeqBSnQzqWD2ftDeUuxIeGFmU2QaLDZdNeIJ2Z4HXnDAier9+tfMorSX+jB1itKiQuQewlX/xNHtPkxA6HubszIN5E5KaNhTdL+1j3BFRxmf190JbPFkyEashjpXfyuek+Q1P2Yfs="
+    domain: "VALUE_HERE"
 
   # Destination path (directory) for the data files. Accepts placeholders.
   path: "_data/comments/{options.slug}"
