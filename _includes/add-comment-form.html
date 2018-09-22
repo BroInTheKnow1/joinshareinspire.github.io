@@ -1,0 +1,32 @@
+<form  {% if include.comment == nil %}id="root-comment-form"{% endif %} class="add-comment-form {% if include.comment == nil %}root-comment-form{% endif %}" onsubmit="saveUserInfo(this)" method="POST" action="https://api.staticman.net/v2/entry/TwitchBronBron/bronley.com/master/comments">
+    <h2 class="mt-0">{% if include.comment %}Reply to {{include.comment.name}}{% else %}Leave a comment{% endif %}</h2>
+
+
+    <input name="fields[name]" type="text" placeholder="Name" class="form-control name-input" />
+    <input name="fields[email]" type="email" placeholder="Email address (used for Gravatar image)" class="form-control email-address-input">
+    <div>
+        <div class="tabs">
+            <div class="tab active write" onclick="hideMarkdownPreview(this)">Write</div>
+            <div class="tab preview" onclick="showMarkdownPreview(this)">Preview</div>
+        </div>
+        <div class="message-area">
+            <textarea rows="7" name="fields[message]" placeholder="Comment (markdown is supported)" class="form-control comment-message-textarea"></textarea>
+            <div class="comment-message-preview hide"></div>
+        </div>
+    </div>
+
+    <!--hidden fields-->
+    <input name="options[redirect]" type="hidden" value="https://www.bronley.com/submitted">
+    <!-- e.g. "2016-01-02-this-is-a-post" -->
+    <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+    <input name="fields[parentId]" type="hidden" value="{{include.comment._id}}" />
+
+    <!-- <input type="hidden" name="options[reCaptcha][siteKey]" value="YOUR-SITE-KEY">
+    <input type="hidden" name="options[reCaptcha][secret]" value="YOUR-ENCRYPTED-SECRET">
+    <div class="g-recaptcha" data-sitekey="YOUR-SITE-KEY"></div>
+    <script src='https://www.google.com/recaptcha/api.js'></script> -->
+    <button class="btn btn-primary" type="submit">Add Comment</button>
+    {% if include.comment %}
+        <button class="btn btn-secondary" onclick="cancelReply(this)" type="button">Cancel</button>
+    {% endif %}
+</form>

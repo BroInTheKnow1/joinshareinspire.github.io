@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="posts">
+    {% for post in site.posts %}
+        {% unless post.path contains '-draft.md' %}
+            <article class="post">
+                <h1 class="mt-0 mb-0"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+                <div class="date">
+                    {{ post.date | date: "%B %e, %Y" }}
+                </div>
+                <div class="entry">
+                    {{ post.excerpt }}
+                </div>
+
+                <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+            </article>
+        {% endunless %}
+    {% endfor %}
+</div>

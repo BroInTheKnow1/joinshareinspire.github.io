@@ -1,0 +1,30 @@
+---
+
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator>
+    <link href="{{site.url}}/feed.xml" rel="self" type="application/atom+xml" />
+    <link href="{{site.url}}/" rel="alternate" type="text/html" />
+    <updated>{{ site.time | date_to_xmlschema}}</updated>
+    <id>{{site.url}}/</id>
+    <title type="html">{{site.name}}</title>
+    <subtitle>{{site.description}}</subtitle>
+    {%- assign posts = site.posts | sort | reverse -%}
+    {%- for post in posts -%}
+        {%- unless post.path contains '-draft.md' -%}
+    <entry>
+        <title type="html">{{post.title}}</title>
+        <link href="{{site.url}}{{post.url}}" rel="alternate" type="text/html" title="{{post.title}}" />
+        <published>{{post.date | date_to_xmlschema}}</published>
+        <updated>{{post.date | date_to_xmlschema}}</updated>
+        <id>{{site.url}}{{post.url}}</id>
+        <content type="html" xml:base="{{site.url}}{{post.url}}">{{post.content | xml_escape}}</content>
+        <author>
+            <name>{{site.name}}</name>
+        </author>
+        <summary type="html">{{post.excerpt | xml_escape}}</summary>
+    </entry>
+        {%- endunless -%}
+    {%- endfor -%}
+</feed>

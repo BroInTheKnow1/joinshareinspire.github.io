@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "*.html": "jekyll"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "_site": false,
+        ".jekyll-metadata": true,
+        ".sass-cache": true
+    }
+}

@@ -1,0 +1,31 @@
+<div class="comment" id="{{include.comment._id}}">
+    <div class="header">
+        <img class="avatar" src="https://www.gravatar.com/avatar/{{ include.comment.email }}?d=mm&s=50" 
+            srcset="https://www.gravatar.com/avatar/{{ include.comment.email }}?d=mm&s=100 2x"
+            alt="{{ include.comment.name }}" height="50" width="50" />
+        <div class="header-text">
+            <div class="name">{{include.comment.name}}</div>
+            <a class="comment-date" href="#{{include.comment._id}}" title='Link directly to this comment'>
+                {{include.comment.date | date: "%B %e, %Y at %l:%m%p" }}
+            </a>
+        </div>
+    </div>
+    <div class="content-row">
+        <div class="content">
+            <p class="comment-message">{{include.comment.message | markdownify}}</p>
+            <div class="comment-reply-container">
+                <a class="comment-reply-anchor hide" onclick="showReplyForm(this)"><i class="reply">&#x21b6;</i>&nbsp;Reply</a>
+                {% include add-comment-form.html comment=include.comment %}
+            </div>
+        </div>
+        <div class="child-comments-container">
+            <!--loop through every comment, add subcomments only for this comment-->
+            {% for c in include.comments %}
+                {% assign loopComment = c[1] %}
+                {% if loopComment.parentId != '' and loopComment.parentId == include.comment._id %}
+                    {% include comment.html comment=loopComment comments=comments %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
