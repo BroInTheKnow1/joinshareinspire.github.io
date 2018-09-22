@@ -27,7 +27,7 @@ Senectus et netus et malesuada fames ac. Arcu vitae elementum curabitur vitae nu
 
 ## What I will do about it next week
 
-Here are some changes to my file.
+Here are some changes to my file. (they are pretty cool)
 
 Placerat duisl purus. Euismod nisi porta lorem mollis aliquam ut porttitor leo. 
 Vitae semper quis lectus nulla at volutpat diam. Feugiat in fermentum posuere urna nec.
